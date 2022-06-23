@@ -34,6 +34,7 @@ contract CompanyContract is ERC721, ERC721Burnable, Ownable {
     function CreateChild(address _owner,string memory _name, string memory _symbol) public onlyOwner{
         Greenchase c = Greenchase(origin);
         c.createchild(_owner,_name,_symbol);
+        safeMint();
     }
 }
 
